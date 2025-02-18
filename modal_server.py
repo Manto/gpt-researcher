@@ -49,7 +49,7 @@ web_api_image = modal.Image.debian_slim(python_version="3.12").pip_install(
     "loguru",
 )
 
-app = modal.App("gpt-researcher-server-2",
+app = modal.App("gpt-researcher-server",
 )
 vol_output = modal.Volume.from_name("gpt-researcher-output", create_if_missing=True)
 vol_docs = modal.Volume.from_name("gpt-researcher-docs", create_if_missing=True)
